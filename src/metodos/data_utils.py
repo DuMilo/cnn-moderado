@@ -3,6 +3,16 @@ from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 
 def modifica_imagem():
+    """
+    Cria uma transformação composta para as imagens do dataset FashionMNIST.
+
+    A transformação converte a imagem para tensor e normaliza os valores dos pixels 
+    com média 0.5 e desvio padrão 0.5, preparando os dados para entrada em modelos 
+    baseados em PyTorch.
+
+    Returns:
+        torchvision.transforms.Compose: Transformação composta aplicada nas imagens.
+    """
     transform = transforms.Compose([
         transforms.ToTensor(),
         transforms.Normalize((0.5,), (0.5,))])
@@ -10,8 +20,18 @@ def modifica_imagem():
 
 
 def get_dataloaders(data_root, batch_size, shuffle, num_workers):
+    """
+    Cria e retorna os DataLoaders e datasets de treino e teste.
 
-    # cria e retorna os DataLoaders de treino e teste para o FashionMNIST.
+    Args:
+        data_root (str): Diretório raiz onde os dados serão armazenados ou carregados.
+        batch_size (int): Número de amostras por batch para os DataLoaders.
+        shuffle (bool): Se as amostras de treino devem ser embaralhadas.
+        num_workers (int): Número de subprocessos para carregar os dados.
+
+    Returns:
+       retorna uma tupla.
+    """
     trainset = datasets.FashionMNIST(
         root=data_root, train=True, download=True, transform=modifica_imagem
     )

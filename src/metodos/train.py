@@ -8,6 +8,19 @@ from metodos.evaluation import evaluate
 
 # --- funções auxiliares ---
 def save_checkpoint(model, optimizer, epoch, val_acc, config, is_best):
+    """
+    Salva o estado atual do modelo e do otimizador em um arquivo de checkpoint.
+    Args:
+        model (torch.nn.Module): Modelo cujo estado será salvo.
+        optimizer (torch.optim.Optimizer): Otimizador cujo estado será salvo.
+        epoch (int): Época atual do treinamento.
+        val_acc (float): Acurácia de validação obtida na época atual.
+        config (dict): Configurações do experimento, incluindo caminhos para salvar checkpoints.
+        is_best (bool): Indica se o modelo atual é o melhor até o momento.
+
+    Returns:
+        None
+    """
     # salva o checkpoint, com 'best_model.pth' separado.
     run_name = config['run_name']
     checkpoint_dir = os.path.join(config['outputs']['checkpoint_dir'], run_name)
@@ -31,6 +44,24 @@ def save_checkpoint(model, optimizer, epoch, val_acc, config, is_best):
 
 # --- Função Principal de Treinamento ---
 def treinamento(trainloader, testloader, model, device, optimizer, criterion):
+    """
+    Executa o loop de treinamento para um modelo CNN
+
+    Essa função realiza o treinamento do modelo por um número configurado de épocas, 
+    calcula métricas de perda e acurácia no conjunto de validação, registra logs no TensorBoard
+    e salva checkpoints dos modelos (incluindo o melhor modelo).
+
+    Args:
+        trainloader (DataLoader): DataLoader para os dados de treino.
+        testloader (DataLoader): DataLoader para os dados de validação/teste.
+        model (torch.nn.Module): Modelo CNN a ser treinado.
+        device (torch.device): Dispositivo para computação (CPU ou GPU).
+        optimizer (torch.optim.Optimizer): Otimizador para ajustar os pesos do modelo.
+        criterion (torch.nn.modules.loss._Loss): Função de perda usada no treinamento.
+
+    Returns:
+        None
+    """
     # Carregar Configuração
     with open('config.yaml', 'r') as f:
         config = yaml.safe_load(f)
