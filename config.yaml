@@ -1,6 +1,6 @@
 #config.yaml
 
-run_name: "fashion_cnn_v1_lr_001" # Mudar a cada experimento
+run_name: "fashion_cnn_v1_lr_002" # Mudar a cada experimento
 
 data:
   root: "./data"

@@ -38,7 +38,9 @@ python main.py
 
 5. **Visualizando métricas no tensorboard**
 
+Na pasta raiz, execute:
 ```bash
+cd ./outputs/logs
 tensorboard --logdir runs
 ```
 
@@ -53,7 +55,7 @@ tensorboard --logdir runs
 
 Licença ISC - Veja o arquivo LICENSE para detalhes
 
-<h3>Integrantes da Equipe</h3>
+## Integrantes da Equipe
 
 <ul>
 <li>Milo Castro <a href="https://github.com/DuMilo">[@DuMilo]</a></li> 
@@ -66,3 +68,5 @@ Licença ISC - Veja o arquivo LICENSE para detalhes
   <img src="https://avatars.githubusercontent.com/u/98708399?v=4" width=100px height=100px> 
   
 </div>
+
+<li>Repositório disponível em <a href="https://github.com/DuMilo/cnn-moderado">[repo-cnn-moderado]</a></li>

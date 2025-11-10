@@ -77,7 +77,7 @@ def treinamento(trainloader, testloader, model, device, optimizer, criterion):
     print(f"Logs do TensorBoard em: {log_dir}")
 
     # Loop de Treinamento
-    print(f"Iniciando treino para {cfg_train['num_epochs']} épocas...")
+    print(f"Iniciando treino para {cfg_train['num_epochs']} epocas...")
     best_val_acc = 0.0
     
     for epoch in range(1, cfg_train['num_epochs'] + 1):

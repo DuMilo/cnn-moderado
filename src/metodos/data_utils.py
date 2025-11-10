@@ -33,10 +33,10 @@ def get_dataloaders(data_root, batch_size, shuffle, num_workers):
        retorna uma tupla.
     """
     trainset = datasets.FashionMNIST(
-        root=data_root, train=True, download=True, transform=modifica_imagem
+        root=data_root, train=True, download=True, transform=modifica_imagem()
     )
     testset = datasets.FashionMNIST(
-        root=data_root, train=False, download=True, transform=modifica_imagem
+        root=data_root, train=False, download=True, transform=modifica_imagem()
     )
 
     trainloader = DataLoader(
