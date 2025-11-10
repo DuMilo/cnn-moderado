@@ -1,4 +1,57 @@
-# cnn-moderado
+# Aplicação do CNN
+
+## Início Rápido
+
+### Pré-requisitos
+
+- Python 3.10 ou superior
+- pip
+- Git (opcional, para clonar o repositório)
+
+### Instalação
+
+1. **Clonar repositório**
+
+```bash
+git clone https://github.com/DuMilo/cnn-moderado.git
+```
+
+2. **Criando ambiente virtual**
+
+```bash
+cd cnn-moderado/
+python -m venv venv
+venv\Scripts\activate
+```
+
+3. **Instalando dependências**
+
+```bash
+pip install -r requirements.txt
+```
+
+4. **Executando o código**
+```bash
+cd src/
+python main.py
+```
+
+5. **Visualizando métricas no tensorboard**
+
+```bash
+tensorboard --logdir runs
+```
+
+## Convenção de Commit
+- `feat:` - Novas funcionalidades
+- `fix:` - Correções de bugs
+- `docs:` - Documentação
+- `test:` - Testes
+- `refactor:` - Refatoração de código
+
+## Licença
+
+Licença ISC - Veja o arquivo LICENSE para detalhes
 
 <h3>Integrantes da Equipe</h3>
 
