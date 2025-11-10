@@ -1,5 +1,4 @@
 # nesse arquivo, criamos os DataLoaders para o dataset FashionMNIST.
-
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 

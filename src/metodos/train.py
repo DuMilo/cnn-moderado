@@ -1,7 +1,5 @@
 # nesse arquivo, implementamos o loop de treinamento para o modelo CNN.
 import torch
-import torch.nn as nn
-import torch.optim as optim
 import yaml
 import os
 import time

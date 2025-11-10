@@ -2,10 +2,6 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torch.utils.data import DataLoader
-import torchvision
-from torchvision import transforms, datasets
-from torch.utils.tensorboard import SummaryWriter
 import yaml
 
 #importando as classes 
