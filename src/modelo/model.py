@@ -1,12 +1,8 @@
-# nesse arquivo, definimos o modelo CNN para classificação de imagens FashionMNIST.
-
 import torch.nn as nn
 
 class SimpleCNN(nn.Module):
     def __init__(self, in_channels, h1_channels, h2_channels, linear_dim, dropout_rate, num_classes):
-
         # __init__ agora aceita parâmetros, tornando o modelo configurável.
-
         super().__init__()
         
         # O valor 7*7 é calculado a partir de uma imagem 28x28

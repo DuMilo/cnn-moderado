@@ -1,6 +1,6 @@
 #config.yaml
 
-run_name: "fashion_cnn_v1_lr_001" # Mudar a cada experimento
+run_name: "fashion_cnn_v1_lr_002" # Mudar a cada experimento
 
 data:
   root: "./data"
@@ -16,12 +16,14 @@ model:
   num_classes: 10
 
 training:
-  device: "cuda" # 'cuda' ou 'cpu'
+  device: "cpu" # 'cuda' ou 'cpu'
   seed: 42
   optimizer: "Adam"
   learning_rate: 0.001
   num_epochs: 10
 
 outputs:
-  log_dir: "outputs/logs"
-  checkpoint_dir: "outputs/checkpoints"
+  log_dir: "../../outputs/logs"
+  checkpoint_dir: "../../outputs/checkpoints"
+
+  
